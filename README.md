@@ -3,9 +3,9 @@
 ## Steps
 
 1. Run the DDL scripts once to create schemas, tables, views, sequences and one time DMLs.
-2. Run the ingestion script to load the file from the external stage into `RAW.RAW_LOAN_MONTHLY` and write the run details to `RAW.LOAD_HISTORY`.
-3. Run the merge script to upsert the current batch into `TARGET.TARGET_LOAN_MONTHLY`.
-4. Run the QC script to write validation results into `TARGET.QC_RESULTS`.
+2. Run the ingestion script (10_load_raw_loan_monthly.sql) to load the file from the external stage into `RAW.RAW_LOAN_MONTHLY` and write the run details to `RAW.LOAD_HISTORY`.
+3. Run the merge script (20_merge_target_loan_monthly.sql) to upsert the current batch into `TARGET.TARGET_LOAN_MONTHLY`.
+4. Run the QC script (30_qc_checks.sql) to write validation results into `TARGET.QC_RESULTS`.
 
 ## Operational Notes
 
