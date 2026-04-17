@@ -23,4 +23,5 @@ I use ON_ERROR = 'ABORT_STATEMENT' so COPY INTO fails as a unit. If an error occ
 
 ### What warehouse sizing / file sizing guidance would you give for performance?
 
-For a monthly batch pipeline, I would start with a small or medium warehouse and scale only if load times require it. I would avoid many tiny files because they add overhead, and I would prefer reasonably sized compressed files, typically in the tens to hundreds of MB range, to balance parallelism and efficiency.
+For this monthly pipeline, I would start with a small or medium warehouse and scale only if load times require it. Snowflake notes that for data loading, warehouse size should match the number of files and the amount of data in each file, and that simply increasing warehouse size does not always improve load performance because loading is heavily influenced by file count and file size.
+For file sizing, I would use compressed files and avoid many tiny files. Snowflake recommends aiming for files roughly 100–250 MB compressed for a strong cost/performance balance, with at least 10 MB on average to avoid excessive per-file overhead.
