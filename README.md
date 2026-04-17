@@ -1,10 +1,8 @@
-# loan-pipeline
-
 # Snowflake Loan Monthly Pipeline
 
 ## Steps
 
-1. Run the DDL scripts once to create schemas, tables, view, and sequence.
+1. Run the DDL scripts once to create schemas, tables, views, sequences and one time DMLs.
 2. Run the ingestion script to load the file from the external stage into `RAW.RAW_LOAN_MONTHLY` and write the run details to `RAW.LOAD_HISTORY`.
 3. Run the merge script to upsert the current batch into `TARGET.TARGET_LOAN_MONTHLY`.
 4. Run the QC script to write validation results into `TARGET.QC_RESULTS`.
