@@ -1,7 +1,7 @@
 -- 4) LOAD HISTORY / AUDIT TABLE
 -- One row per ingestion run / file load attempt.
 -- =========================================================
-CREATE OR REPLACE TABLE TARGET.LOAD_HISTORY (
+CREATE OR REPLACE TABLE RAW.LOAD_HISTORY (
     run_id            NUMBER        NOT NULL,
     file_name         STRING        NOT NULL,
     start_time        TIMESTAMP_NTZ NOT NULL,
