@@ -76,6 +76,17 @@ BEGIN
         error_message = NULL
     WHERE run_id = v_run_id;
 
+    INSERT INTO RAW.PIPELINE_CONTROL_STATE (
+        process,
+        key,
+        value
+    )
+    VALUES (
+        "load_raw_loan_monthly"
+        "last_run_id",
+        v_run_id
+    );
+
 EXCEPTION
     WHEN OTHER THEN
         UPDATE RAW.LOAD_HISTORY
