@@ -1,0 +1,5 @@
+CREATE TABLE RAW.PIPELINE_CONTROL_STATE (
+    process STRING,
+    key STRING,
+    value STRING
+);
