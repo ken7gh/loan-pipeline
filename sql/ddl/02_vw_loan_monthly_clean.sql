@@ -14,4 +14,4 @@ SELECT
     file_name,
     load_time,
     run_id
-FROM RAW_LOAN_MONTHLY;
+FROM RAW.RAW_LOAN_MONTHLY;
