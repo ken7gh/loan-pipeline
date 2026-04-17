@@ -2,7 +2,7 @@
 -- 5) QC RESULTS TABLE
 -- One row per QC check per run.
 -- =========================================================
-CREATE OR REPLACE TABLE QC_RESULTS (
+CREATE OR REPLACE TABLE TARGET.QC_RESULTS (
     run_id            STRING        NOT NULL,
     check_name        STRING        NOT NULL,
     expected_value    STRING,
