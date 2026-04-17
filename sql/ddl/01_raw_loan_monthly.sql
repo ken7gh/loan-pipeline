@@ -12,5 +12,5 @@ CREATE OR REPLACE TABLE RAW.RAW_LOAN_MONTHLY (
     updated_at        STRING COMMENT 'Field from LOAN_MONTHLY_YYYYMM.gz file',
     file_name         STRING COMMENT 'Metadata File name',
     load_time         TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP() COMMENT 'Metadata Load time',
-    run_id            STRING COMMENT 'Metadata RUN ID'
+    run_id            NUMBER COMMENT 'Metadata RUN ID'
 ) COMMENT = 'Historical table for monthly data from LOAN_MONTHLY_YYYYMM.gz files';
