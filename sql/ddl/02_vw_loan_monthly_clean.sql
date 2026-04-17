@@ -2,7 +2,7 @@
 -- Apply basic cleansing and type casting.
 -- TRY_* functions prevent transformation failures on bad data
 -- =========================================================
-CREATE OR REPLACE VIEW VW_LOAN_MONTHLY_CLEAN AS
+CREATE OR REPLACE VIEW RAW.VW_LOAN_MONTHLY_CLEAN AS
 SELECT
     NULLIF(TRIM(reporting_month), '')                              AS reporting_month,
     NULLIF(TRIM(loan_id), '')                                      AS loan_id,
