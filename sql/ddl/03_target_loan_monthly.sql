@@ -13,7 +13,7 @@ CREATE OR REPLACE TABLE TARGET.TARGET_LOAN_MONTHLY (
     updated_at        TIMESTAMP_NTZ,
     created_at        TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
     last_modified_at  TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
-    last_run_id       STRING,
+    last_run_id       NUMBER,
     last_file_name    STRING
     ,CONSTRAINT PK_TARGET_LOAN_MONTHLY PRIMARY KEY (loan_id, reporting_month)
 ) COMMENT = 'Current data table for monthly loan data';
